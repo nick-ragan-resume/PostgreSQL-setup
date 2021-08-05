@@ -2,75 +2,63 @@
 Set up PostgreSQL on a RaspberryPi-4
 
 
-
-# install dependencies and postgresql
+### install dependencies and postgresql
 sudo apt install postgresql
 
+# Configure User
+### change to postgres user
+<code>sudo su postgres</code>
 
-#######################################
-configure PostgreSQL's CLI to use the pi User
-#######################################
+### create a new role
+<code>createuser <username> -P --interactive</code>
 
-# change to postgres user
-sudo su postgres
+### Enter a password for this new role
+<code>Enter password for new role:</code>
+<code>Enter it again:</code>
 
-# create a new role
-# <username> = pi
-createuser <username> -P --interactive
+### You will now need to decide if you want this new user to be a superuser
+### if you want to use the new user to create databases and other stuff, answer Y to this question
+<q>Shall the new role be a superuser? (y/n)</q> <code>y</code>
 
-# Enter a password for this new role
-Enter password for new role:
-Enter it again:
+### Create a database that has the same name as our user.
+<blockquote>When you use the CLI, it will try to auto connect to a database with the same name as your username. Load up
+    the CLI by running the following command</blockquote>
+<code>psql</code>
 
-# You will now need to decide if you want this new user to be a superuser
-# if you want to use the new user to create databases and other stuff, answer Y to this question
-Shall the new role be a superuser? (y/n) y
+### Create a database with the username you chose
+<code>CREATE DATABASE <username>;</code>
 
-# Create a database that has the same name as our user
-# When you use the CLI, it will try to auto connect to a database with the same name as your username
+### Quit the CLI tool by typing
+<code>exit</code>
 
-# Load up the CLI by running the following command
-psql
+## CREATE POSTGRESQL DATABASE
+### Load into Postgres CLI
+<code>psql</code>
 
-# Create a database with the username you chose
-CREATE DATABASE <username>;
+### Create and manipulate databases
+<code>CREATE DATABASE <database-name>;</code>
 
-# Quit the CLI tool by typing:
-exit
+### Connect to newly created database
+<code>\connect "database-name";</code>
 
-######################################
-END SETUP and CONFIGURE of POSTGRESQL RASPBERRYPI 4
-######################################
+### If you connected successfully, you should be prompted with a message
+<blockquote>You are now connected to database "database-name" as user "pi"</blockquote>
 
+### Create a sample database table
+<code>CREATE TABLE programming_books (name text, author text);</code>
 
+### Add data to database
+<code>INSERT INTO programming_books VALUES ('Practical SQL', 'Anthony Debarros');</code>
 
-
-######################################
-CREATE POSTGRESQL DATABASE
-######################################
-
-# Load into Postgres CLI
-psql
-
-# Create and manipulate databases
-CREATE DATABASE <database-name>;
-
-# Connect to newly created database
-\connect <database-name>;
-
-# If you connected successfully, you should be prompted with a message
-You are now connected to database "<database-name>" as user "pi".
-
-# Create a sample database table
-CREATE TABLE programmingbooks (name text, author text);
-
-# Add data to database
-INSERT INTO programmingbooks VALUES ('Practical SQL', 'Anthony Debarros');
-
-# Query data from database
-SELECT * FROM programmingbooks
+### Query data from database
+<code>SELECT * FROM programming_books</code>
 
 
-######################################
-END CREATE POSTGRESQL DATABASE
-######################################
+
+# PostgreSQL Commands
+
+### DROP/DELETE DATABASE
+<code>DROP DATABASE "database_name"; </code>
+
+### RENAME DATABASE
+<code>ALTER DATABASE programming_books RENAME TO something_else</code>
