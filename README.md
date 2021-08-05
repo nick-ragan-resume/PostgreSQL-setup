@@ -36,13 +36,13 @@ sudo apt install postgresql
 <code>psql</code>
 
 ### Create and manipulate databases
-<code>CREATE DATABASE <database-name>;</code>
+<code>CREATE DATABASE <database_name>;</code>
 
 ### Connect to newly created database
-<code>\connect "database-name";</code>
+<code>\connect "database_name";</code>
 
 ### If you connected successfully, you should be prompted with a message
-<blockquote>You are now connected to database "database-name" as user "pi"</blockquote>
+<blockquote>You are now connected to database "database_name" as user "pi"</blockquote>
 
 ### Create a sample database table
 <code>CREATE TABLE programming_books (name text, author text);</code>
