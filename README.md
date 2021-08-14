@@ -83,7 +83,7 @@ sudo apt install postgresql
 
 Magic words:
 ```bash
-psql -U postgres
+psql -U <user_name>
 ```
 Some interesting flags (to see all, use `-h` or `--help` depending on your psql version):
 - `-E`: will describe the underlaying queries of the `\` commands (cool for learning!)
