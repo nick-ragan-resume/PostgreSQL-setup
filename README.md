@@ -26,7 +26,7 @@ sudo apt install postgresql
 <code>psql</code>
 
 ### Create a database with the username you chose
-<code>CREATE DATABASE <username>;</code>
+<code>CREATE DATABASE < username >;</code>
 
 ### Quit the CLI tool by typing
 <code>exit</code>
