@@ -54,8 +54,10 @@ sudo apt install postgresql
 <code>SELECT * FROM programming_books</code>
 
 ### Change Password of PostgreSQL user
-<code> ALTER ROLE username </code>
-<code> WITH PASSWORD 'password';</code>
+<code> ALTER ROLE username </code><br>
+<code> WITH PASSWORD 'password';</code><br>
+https://www.postgresqltutorial.com/postgresql-change-password/
+    
 
     
 # PostgreSQL Commands
