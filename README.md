@@ -10,10 +10,10 @@ sudo apt install postgresql
 <code>sudo su postgres</code>
 
 ### create a new role
-<code>createuser <username> -P --interactive</code>
+<code>createuser <user_name> -P --interactive</code>
 
 ### Enter a password for this new role
-<code>Enter password for new role:</code>
+<code>Enter password for new role:</code><br>
 <code>Enter it again:</code>
 
 ### You will now need to decide if you want this new user to be a superuser
@@ -25,7 +25,7 @@ sudo apt install postgresql
     the CLI by running the following command</blockquote>
 <code>psql</code>
 
-### Create a database with the username you chose
+### Create a database with the username you choose
 <code>CREATE DATABASE <user_name>;</code>
 
 ### Quit the CLI tool by typing
@@ -321,3 +321,12 @@ $ source $HOME/.editrc
 - [A Performance Cheat Sheet for PostgreSQL](https://severalnines.com/blog/performance-cheat-sheet-postgresql): Great explanations of `EXPLAIN`, `EXPLAIN ANALYZE`, `VACUUM`, configuration parameters and more. Quite interesting if you need to tune-up a postgres setup.
 - [annotated.conf](https://github.com/jberkus/annotated.conf): Annotations of all 269 postgresql.conf settings for PostgreSQL 10.
 - `psql -c "\l+" -H -q postgres > out.html`: Generate a html report of your databases (source: [Daniel Westermann](https://twitter.com/westermanndanie/status/1242117182982586372))
+
+    
+# HELP
+### In psql run
+<code>\h</code>
+<br>
+OR
+<br>
+<code>\h <command_name></code>
