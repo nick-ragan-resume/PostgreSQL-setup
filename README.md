@@ -58,7 +58,7 @@ sudo apt install postgresql
 # PostgreSQL Commands
 
 ### PostgreSQL Database Commands List:
-### https://www.postgresql.org/docs/10/sql-commands.html
+## https://www.postgresql.org/docs/10/sql-commands.html
     
 ### CREATE DATABASE
 <code>CREATE DATABASE <user_name></code>
