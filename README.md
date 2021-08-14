@@ -53,7 +53,9 @@ sudo apt install postgresql
 ### Query data from database
 <code>SELECT * FROM programming_books</code>
 
-
+### Change Password of PostgreSQL user
+<code> ALTER ROLE username </code>
+<code> WITH PASSWORD 'password';</code>
 
 # PostgreSQL Commands
 
