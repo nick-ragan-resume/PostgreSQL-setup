@@ -57,8 +57,8 @@ sudo apt install postgresql
 <code> ALTER ROLE username </code>
 <code> WITH PASSWORD 'password';</code>
 
+    
 # PostgreSQL Commands
-
 ### PostgreSQL Database Commands List:
 ## https://www.postgresql.org/docs/10/sql-commands.html
     
