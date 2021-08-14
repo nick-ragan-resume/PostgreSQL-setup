@@ -57,8 +57,24 @@ sudo apt install postgresql
 
 # PostgreSQL Commands
 
+### PostgreSQL Database Commands List
+## https://www.postgresql.org/docs/10/sql-commands.html
+    
+### CREATE DATABASE
+<code>CREATE DATABASE <user_name></code>
+
+### Create a sample database table
+<code>CREATE TABLE programming_books (name text, author text);</code>
+
+### Add data to database
+<code>INSERT INTO programming_books VALUES ('Practical SQL', 'Anthony Debarros');</code>
+
+### Query data from database
+<code>SELECT * FROM programming_books</code>
+    
 ### DROP/DELETE DATABASE
 <code>DROP DATABASE "database_name"; </code>
 
 ### RENAME DATABASE
 <code>ALTER DATABASE programming_books RENAME TO something_else</code>
+
