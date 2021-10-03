@@ -42,7 +42,7 @@ sudo apt install postgresql
 <code>\connect "database_name";</code>
 
 ### If you connected successfully, you should be prompted with a message
-<blockquote>You are now connected to database "database_name" as user "pi"</blockquote>
+<blockquote>You are now connected to database "database_name" as user "user_name"</blockquote>
 
 ### Create a sample database table
 <code>CREATE TABLE programming_books (name text, author text);</code>
